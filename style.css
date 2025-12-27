@@ -1,0 +1,144 @@
+:root {
+    --bg:#f4f6f8;
+    --card: #fff;
+    --text: #111;
+}
+
+body.dark {
+    --bg: #0f172a;
+    --card: #020617;
+    --text: #e5e7eb;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: system-ui;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.profile-info h3 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.profile-info p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.app {
+    display: flex;
+}
+
+.sidebar {
+    width: 220px;
+    background: var(--card);
+    padding: 1rem;
+    transition: .3s;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    list-style: none;
+    padding: 5rem;
+}
+
+.content {
+    padding: 2rem;
+    flex: 1;
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.card {
+    background: var(--card);
+    padding: 1.5rem;
+    border-radius: 12px;
+    max-width: 700px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.email-row, .password {
+    display: flex;
+    gap: 5rem;
+    margin: 1rem 0;
+}
+
+.password span {
+    cursor: pointer;
+}
+
+.save {
+    margin-top: 1rem;
+    padding: 6rem;
+    width: 100%;
+}
+
+.mobile-header {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        height: 100%;
+    }
+    
+    .sidebar.open {
+        left: 0;
+    }
+    .mobile-header {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        background: var(--card);
+    }
+    .content {
+        padding: 1rem;
+    }
+}

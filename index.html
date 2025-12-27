@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="app">
+
+        <aside class="sidebar">
+            <button id="menuBtn" aria-label="Open menu">&#9776;</button>
+            <h3>GENERAL</h3>
+            <ul>
+                <li class="active">Account</li>
+                <li>Financial & Payments</li>
+                <li>Tenant Management</li>
+                <li>Property Management</li>
+                <li>Lease Management</li>
+            </ul> 
+
+            <h3 style="margin-top:1.2rem">SYSTEM</h3>
+            <ul class="menu">
+                <li>Notifications</li>
+                <li>Preferences</li>
+            </ul>
+        </aside>
+
+        <main class="content">
+
+            <div class="content-header">
+                <h2>Account Settings</h2>
+                <button id="themeToggle">🌙 Dark Mode</button>
+            </div>
+
+            <div class="card">
+
+                <div class="profile-header">
+                    <img src="IMG_7786.jpg" alt="Profile" class="profile-img">
+                    <div class="profile-info">
+                        <h3>Oladejo Khadijat</h3>
+                        <p>Frontend Developer</p>
+                        <strong>Profile picture</strong>
+                        <p style="font-size:0.75rem;color:var(--muted)">PNG, JPG under 5MB</p>
+                    </div>
+                </div>
+                    <button onclick="">Upload</button>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label>First name</label>
+                    <input type="text" value="Khadijat">
+                </div>
+                <div class="form-group">
+                    <label>Last name</label>
+                    <input type="text" value="Oladejo">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Contact email</label>
+                <div class="email-row">
+                    <input type="text" id="email" readonly>
+                    <button id="toggleEmail">Show</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" value="password123">
+                </div>
+
+                <div class="form-group">
+                    <label>Confirm password</label>
+                    <input type="password" value="password123">
+                </div>
+            </div>
+        </div>
+        </main>
+    
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
